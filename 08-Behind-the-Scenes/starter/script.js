@@ -39,3 +39,13 @@ calcAge(1991);
 // if functions also have their own scope
 //variables are accessible in their scope local/global
 //functions can access the variables defined in the parent function
+
+//Hoisting and TDZ in Practice
+
+console.log(me);
+console.log(job);
+console.log(year);
+
+var me = 'jonas';
+let job = 'teacher';
+const year = 1991;
