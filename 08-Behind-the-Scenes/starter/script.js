@@ -74,10 +74,22 @@ var numProducts = 10;
 function deleteShoppingCart() {
   console.log('all products deleted');
 }
-var x = 1;
+// var d = 4;
+var x = 2;
 let y = 2;
 const z = 3;
-
+//this is like the global variable but on the browser
+// console.log(d === window.d);
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+
+//the this keyword
+
+//method this =<object that is calling the method
+//simple function call with this = undefined
+// arrow functions = this of surround function lexical this do not get this
+// eventListener this=DOM element that the handler is attached to
+//new,call,apply,bind = later in the course
+
+//this does NOT point to the function itself, and also NOT the its variable environment
