@@ -129,12 +129,33 @@ matilda.calcAge();
 const f = jonas.calcAge;
 //f(); //regular function call so this function also undefined
 */
-
+//var firstName = 'Matilda'; //create property on the global object
 const jonas = {
   firstName: 'jonas',
   year: 1991,
   calcAge: function () {
-    console.log(this);
+    //console.log(this);
     console.log(2037 - this.year);
+    //const self = this; //self or that
+    //*1st solution
+    // const isMillennial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    //   //console.log(this.year >= 1981 && this.year <= 1996);
+    // };
+    //*solution 2
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`); //arrow function
   },
 };
+jonas.greet();
+//in the global scope
+//object literal
+//console.log(this.firstName);
