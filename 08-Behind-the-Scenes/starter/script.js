@@ -93,3 +93,10 @@ console.log(z === window.z);
 //new,call,apply,bind = later in the course
 
 //this does NOT point to the function itself, and also NOT the its variable environment
+
+console.log(this);
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAge(1991);
