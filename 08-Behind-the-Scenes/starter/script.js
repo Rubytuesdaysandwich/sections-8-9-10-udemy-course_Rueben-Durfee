@@ -1,4 +1,5 @@
 'use strict';
+//--------------------start of section 8 -----------------------------------------------------------------
 /*function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
@@ -174,8 +175,9 @@ var addArrow = (a, b) => {
 };
 addArrow(2, 5, 8);
 */
+
+// primitives and objects in practice
 /*
-// primitives and objects in practice 
 
 let age = 30;
 let oldAge = age;
@@ -193,3 +195,41 @@ console.log('Friend:', friend);
 console.log('Me', me);
 //{name: jonas age:27}
 */
+
+//primitives types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+
+//objects reference types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage:', jessica);
+console.log('After marriage:', marriedJessica);
+// marriedJessica={};
+
+//if it was let it could be changed
+
+// copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+//works only on the first level Object.assign({} shallow copy
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('john');
+
+console.log('Before marriage:', jessica2);
+console.log('After marriage:', jessicaCopy);
+//-------------end section 8---------------------------------------------------------------------------------------------
