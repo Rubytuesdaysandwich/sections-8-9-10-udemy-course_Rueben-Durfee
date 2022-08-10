@@ -66,6 +66,10 @@ console.log(i, j, k);
 const [p = 1, q = 1, r = 1] = [8, 9]; //8 and 9 are assigned to 0 and 1 spots in the array r is undefined the [p = 1, q = 1, r = 1] are default values
 console.log(p, q, r);
 
-// destructuring objects------------------------------------
+// destructuring objects------------------------------------start
 
-//the spread operator
+// end------------------------------------------------------
+
+//the spread operator---------------------------------------
+
+//-----------------------------------------------------end
