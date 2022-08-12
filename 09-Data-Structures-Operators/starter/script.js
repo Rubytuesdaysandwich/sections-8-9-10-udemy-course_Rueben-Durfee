@@ -44,7 +44,7 @@ const restaurant = {
     console.log(
       //log the results to the console
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}
-        will be delivered to ${address} at ${time}`
+        will be delivered to ${address} at ${time}` //using this to access the method of restaurant
     );
   },
   orderPastas: function (ing1, ing2, ing3) {
@@ -57,7 +57,35 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+//!===================================================
+//start short circuiting(&& and || )----------------------------
+//use ANY data typem return ANY data type,short circuiting
+/*
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
 
+console.log(undefined || 0 || '' || 'Hello' || 23 || null); //returns hello because it is first item to be true
+// restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10; //if it does not exist then the default value is 10
+console.log(guests1);
+const guests2 = restaurant.numGuests || 10; //will not work properly if value of numGuests is 0 because 0 is not true value
+console.log(guests2);
+
+console.log('----AND----');
+console.log(0 && 'jonas');
+console.log(7 && 'jonas'); //only works if they are all true
+console.log('Hello' && 23 && null && 'Jonas'); //output null because we have a value that is not truth. using && operators we need them to be true
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach'); //if restaurant.orderPIzza exists then order pizza
+*/
+//end short circuiting(&& and || )------------------------------
+
+//!=========================================================
 //rest operator------------------------------------------
 /*
 const arr = [1, 2, ...[3, 4]]; //when the ... is to the right of the assignment operator sign it is spread
@@ -190,7 +218,7 @@ console.log(o, c);
 */
 
 //!===========================================================
-// end------------------------------------------------------
+// end------------------------------------------------------destructing objects
 //destructing arrays start--------------------------
 /*
 const arr = [2, 3, 4]; //this is without destructuring
@@ -228,4 +256,5 @@ console.log(i, j, k);
 const [p = 1, q = 1, r = 1] = [8, 9]; //8 and 9 are assigned to 0 and 1 spots in the array r is undefined the [p = 1, q = 1, r = 1] are default values
 console.log(p, q, r);
 */
-//end destructing arrays
+//end destructing arrays------------------------------------------------
+//!==================================
