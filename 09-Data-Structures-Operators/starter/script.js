@@ -59,6 +59,7 @@ const restaurant = {
 };
 
 //rest operator------------------------------------------
+/*
 const arr = [1, 2, ...[3, 4]]; //when the ... is to the right of the assignment operator sign it is spread
 //when it is to the left is is a rest operator sign
 const [a, b, ...others] = [1, 2, 3, 4, 5];
@@ -91,7 +92,7 @@ restaurant.orderPizza('mushrooms');
 //they look the same but operate opposite from each other.
 //rest used on multiple variables, rest used on multiple values
 //end rest operator---------------------------------------
-
+*/
 //!==========================================================
 //the spread operator---------------------------------------
 /*
