@@ -60,6 +60,36 @@ const restaurant = {
 //!=================================================
 // start logical assignment operators--------------------
 
+const rest1 = {
+  name: 'capri',
+  //numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+//rest1.numGuests = rest1.numGuests || 10;
+//rest2.numGuests = rest2.numGuests || 10;
+//short hand of version
+//rest1.numGuests ||= 10;
+//rest2.numGuests ||= 10;
+
+//nullish assignment operator (null or undefined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+//AND assignment operator
+//rest1.owner = rest1.owner && '<ANONYMOUS>'; //returns nullish because of && operator owner does not exist
+//rest2.owner = rest2.owner && '<ANONYMOUS>'; //return Giovanni Rossi
+rest1.owner &&= '<ANONYMOUS>'; //using the &&=
+rest2.owner &&= '<ANONYMOUS>'; //if true return anonymous
+
+console.log(rest1);
+console.log(rest2);
+
 //end logical assignment operators------------------------
 
 //!==================================================
