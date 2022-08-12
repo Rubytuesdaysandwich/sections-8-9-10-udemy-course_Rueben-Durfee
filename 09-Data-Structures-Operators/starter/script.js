@@ -52,8 +52,49 @@ const restaurant = {
       `here is your declicious pasta with ${ing1},${ing2} and ${ing3}`
     );
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
+
+//rest operator------------------------------------------
+const arr = [1, 2, ...[3, 4]]; //when the ... is to the right of the assignment operator sign it is spread
+//when it is to the left is is a rest operator sign
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(pizza, risotto, otherFood);
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+//2)functions
+const add = function (...numbers) {
+  //using rest operator in the function parameters
+  console.log(numbers);
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i]; //loop the length of the array
+  console.log(sum);
+};
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+const x = [23, 5, 7];
+add(...x); //using spread operator
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+restaurant.orderPizza('mushrooms');
+//they look the same but operate opposite from each other.
+//rest used on multiple variables, rest used on multiple values
+//end rest operator---------------------------------------
+
+//!==========================================================
 //the spread operator---------------------------------------
+/*
 const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[2]]; //this is an array literal
 console.log(badNewArr);
@@ -102,7 +143,7 @@ const restaurantCopy = { ...restaurant }; //making a copy of the restaurant and 
 restaurantCopy.name = 'ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
-
+*/
 //-----------------------------------------------------end spread operator
 //!====================================================
 /*
