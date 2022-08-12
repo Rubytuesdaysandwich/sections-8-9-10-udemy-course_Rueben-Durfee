@@ -48,7 +48,7 @@ const restaurant = {
     );
   },
 };
-
+//the spread operator---------------------------------------
 const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[2]]; //this is an array literal
 console.log(badNewArr);
@@ -71,6 +71,7 @@ const letters = [...str, '', 's.'];
 console.log(letters);
 console.log(...str);
 console.log('j', 'o');
+//-----------------------------------------------------end spread operator
 //!====================================================
 /*
 //destructuring objects
@@ -154,7 +155,3 @@ const [p = 1, q = 1, r = 1] = [8, 9]; //8 and 9 are assigned to 0 and 1 spots in
 console.log(p, q, r);
 */
 //end destructing arrays
-
-//the spread operator---------------------------------------
-
-//-----------------------------------------------------end
