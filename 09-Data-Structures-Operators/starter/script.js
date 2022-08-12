@@ -64,6 +64,13 @@ const mainMenuCopy = [...restaurant.mainMenu];
 //join 2 arrays
 const menu = [...restaurant.starterMenu, restaurant.mainMenu];
 console.log(menu);
+
+//Iterables: arrays,strings,maps,sets. NOT objects
+const str = 'Jonas';
+const letters = [...str, '', 's.'];
+console.log(letters);
+console.log(...str);
+console.log('j', 'o');
 //!====================================================
 /*
 //destructuring objects
