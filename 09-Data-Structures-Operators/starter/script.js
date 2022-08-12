@@ -47,6 +47,11 @@ const restaurant = {
         will be delivered to ${address} at ${time}`
     );
   },
+  orderPastas: function (ing1, ing2, ing3) {
+    console.log(
+      `here is your declicious pasta with ${ing1},${ing2} and ${ing3}`
+    );
+  },
 };
 //the spread operator---------------------------------------
 const arr = [7, 8, 9];
@@ -70,7 +75,34 @@ const str = 'Jonas';
 const letters = [...str, '', 's.'];
 console.log(letters);
 console.log(...str);
-console.log('j', 'o');
+//console.log('j', 'o');
+//console.log('${...str} Schmedtmann');
+
+//
+const ingredients = [
+  //an array of prompts to ask the user for ingredients
+  prompt("lets's make pasta! Ingredient 1?"),
+  prompt('Ingredient 2?'),
+  prompt('Ingredient 3?'),
+];
+console.log(ingredients);
+
+restaurant.orderPastas(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPastas(...ingredients);
+
+//objects
+const newRestaurant = {
+  foundedIn: 1998,
+  ...restaurant,
+  founder: 'Gscauuiseppe',
+};
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant }; //making a copy of the restaurant and then changing the name
+restaurantCopy.name = 'ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+
 //-----------------------------------------------------end spread operator
 //!====================================================
 /*
