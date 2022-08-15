@@ -56,13 +56,19 @@ const restaurant = {
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
-}; 
+};
 // start for-of loop
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menu) console.log(item);
+
+for (const item of menu.entries()) {
+  console.log(item);
+} /*
 
 //end for-of loop
 //!=======================================================================
-/*
-/*
+
+// coding challenge 1 --------------
 
 /* 
 We're building a football betting app (soccer for my American friends 😅)!
@@ -81,6 +87,7 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 
 GOOD LUCK 😀
 */
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -150,9 +157,10 @@ printgoals(...game.scored); //using the spread operator to pull apart the games.
 //logical operator used in place of an if statement &&
 //which ever team has the lower odd is more likely to win
 team1 < team2 && console.log('team 1 is more likely to win');
-team1 > team2 && console.log('team 2 is more likely to win');
-//---------------------------------------------------end challenge #1
+team1 > team2 && console.log('team 2 is more likely to win'); 
 */
+//---------------------------------------------------end challenge #1
+
 //!=================================================
 // start logical assignment operators--------------------
 /*
