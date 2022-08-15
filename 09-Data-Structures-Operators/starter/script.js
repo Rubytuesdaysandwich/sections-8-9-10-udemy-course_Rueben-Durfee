@@ -57,14 +57,20 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+
 // start for-of loop
+//used to loop over arrays
+
+//destructing being used here on the array
+/*
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 for (const item of menu) console.log(item);
 
-for (const item of menu.entries()) {
-  console.log(item);
-} /*
-
+for (const [i, el] of menu.entries()) {
+  console.log(`${i[0] + 1}: ${el}`);
+}
+// console.log([...menu.entries()]);
+*/
 //end for-of loop
 //!=======================================================================
 
