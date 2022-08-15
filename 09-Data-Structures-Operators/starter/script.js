@@ -115,17 +115,35 @@ const game = {
   },
 };
 //1.
-const [players1, players2] = game.players;
+const [players1, players2] = game.players; //gets the players from from teams in the object game.players
 console.log(players1, players2);
 //2.
-const [gk, ...fieldPlayers] = players1;
+const [gk, ...fieldPlayers] = players1; //shows the goalie keeper of team 1 and the players
 console.log(gk, fieldPlayers);
 //3.
-const allPlayers = [...players1, ...players2];
-console.log(allPlayers);
+const allPlayers = [...players1, ...players2]; //gets the total count between the two teams
+console.log(allPlayers); //console logging the results to the console for number of players total
 //4.
-const players1Final = [...players1, 'Thiago', 'Coutinho'];
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'perisic']; //adding three players to the players as substitutes
+//5.
+const {
+  odds: { team1, x: draw, team2 }, //accessing the odds objects and everything inside it and setting them to variable destructing an object and assigning the values variables
+} = game;
+console.log(team1, draw, team2);
+//6.
+const printgoals = function (...players) {
+  //using the rest operator to  get the number of goals scored
+  console.log(`${players.length} goals were scored `);
+};
 
+//printgoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+//printgoals('Davies', 'Muller');
+printgoals(...game.scored); //using the spread operator to pull apart the games.scored array
+//7.
+//logical operator used in place of an if statement &&
+//which ever team has the lower odd is more likely to win
+team1 < team2 && console.log('team 1 is more likely to win');
+team1 > team2 && console.log('team 2 is more likely to win');
 //!=================================================
 // start logical assignment operators--------------------
 /*
