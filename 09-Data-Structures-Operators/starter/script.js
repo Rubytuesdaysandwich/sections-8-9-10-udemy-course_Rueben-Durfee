@@ -56,7 +56,13 @@ const restaurant = {
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
-}; /*
+}; 
+// start for-of loop
+
+//end for-of loop
+//!=======================================================================
+/*
+/*
 
 /* 
 We're building a football betting app (soccer for my American friends 😅)!
@@ -74,7 +80,7 @@ Suppose we get data from a web service about a certain game (below). In this cha
 TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call the function again with players from game.scored
 
 GOOD LUCK 😀
-*/ /*
+*/
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
