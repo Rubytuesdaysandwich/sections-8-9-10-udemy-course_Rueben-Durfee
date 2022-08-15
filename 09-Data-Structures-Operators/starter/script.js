@@ -57,6 +57,7 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+/*
 /* 
 We're building a football betting app (soccer for my American friends 😅)!
 
@@ -144,6 +145,7 @@ printgoals(...game.scored); //using the spread operator to pull apart the games.
 //which ever team has the lower odd is more likely to win
 team1 < team2 && console.log('team 1 is more likely to win');
 team1 > team2 && console.log('team 2 is more likely to win');
+//---------------------------------------------------end challenge #1
 //!=================================================
 // start logical assignment operators--------------------
 /*
