@@ -5,20 +5,22 @@ const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
 const openingHours = {
   //object
-  thu: {
+  [weekdays[3]]: {
     //property of object
     open: 12, //child property of thursday
     close: 22,
   },
-  fri: {
+  [weekdays[4]]: {
     open: 11,
     close: 23,
   },
-  sat: {
+  [weekdays[5]]: {
     open: 0, // Open 24 hours
-    close: 24,
+    close: 12 + 12,
   },
 };
 
@@ -30,8 +32,12 @@ const restaurant = {
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
   //e6 enhanced object literals
   openingHours,
-
-  order: function (starterIndex, mainIndex) {
+  //e6 enhanced object literals
+  // order: function (starterIndex, mainIndex) {
+  //   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  // },
+  order(starterIndex, mainIndex) {
+    //the semi colons have been deleted along with the function original example above
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
   //* before es6 object literals applied
@@ -52,10 +58,12 @@ const restaurant = {
   //   },
   // },
   //* before es6 object literals applied end
-  order: function (starterIndex, mainIndex) {
+  order(starterIndex, mainIndex) {
+    //enhanced object literal
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-  orderDelivery: function ({
+  orderDelivery({
+    //enhanced object literal
     starterIndex = 1, //default value being assigned to the parameter
     mainIndex = 0, //default value
     time = '20:00', //default value
@@ -67,12 +75,14 @@ const restaurant = {
         will be delivered to ${address} at ${time}` //using this to access the method of restaurant
     );
   },
-  orderPastas: function (ing1, ing2, ing3) {
+  orderPastas(ing1, ing2, ing3) {
+    //enhanced object literal get rid of semi colons : and function
     console.log(
       `here is your declicious pasta with ${ing1},${ing2} and ${ing3}`
     );
   },
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  orderPizza(mainIngredient, ...otherIngredients) {
+    //enhanced object literal es6
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
